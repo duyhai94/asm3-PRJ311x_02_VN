@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="486.0"
+            prefWidth="701.0"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.ContactController">
+    <children>
+        <Label layoutX="273.0" layoutY="19.0" text="Enter contact information" />
+        <TextField fx:id="search" layoutX="441.0" layoutY="14.0" prefHeight="27.0" prefWidth="168.0" />
+        <Button fx:id="btnSearch" layoutX="633.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchContact"  text="Search" />
+
+        <TableView fx:id="tblContact" layoutX="21.0" layoutY="51.0" prefHeight="353.0" prefWidth="662.0">
+                        <columns>
+                            <TableColumn fx:id="colFName" prefWidth="110.0" text="Frist Name"/>
+
+                            <TableColumn fx:id="colLName" prefWidth="110.0" text="Last Name"/>
+
+                            <TableColumn fx:id="colPhone" prefWidth="110.0" text="Phone"/>
+
+                            <TableColumn fx:id="colDOB" prefWidth="110.0" text="DOB"/>
+
+                            <TableColumn fx:id="colEmail" prefWidth="110.0" text="Email"/>
+
+                            <TableColumn fx:id="colGroup" prefWidth="110.0" text="Group"/>
+
+                        </columns>
+
+
+        </TableView>
+
+        <Label layoutX="14.0" layoutY="19.0" text="Filter by group" />
+        <ComboBox fx:id="cbGroup" layoutX="114.0" layoutY="15.0" onAction="#filterContact" prefWidth="150.0" />
+
+        <Button fx:id="btnGroup" layoutX="569.0" layoutY="428.0" mnemonicParsing="false" onAction="#groupContact" text="manage group"/>
+
+        <Button fx:id="btnDelete" layoutX="14.0" layoutY="434.0" mnemonicParsing="false" onAction="#delContact" text="Delete"/>
+
+        <Button fx:id="btnUpdate" layoutX="92.0" layoutY="434.0" mnemonicParsing="false" onAction="#updateContact" text="Update"/>
+
+        <Button fx:id="btnAdd" layoutX="179.0" layoutY="434.0" mnemonicParsing="false" onAction="#addContact" text="Add"/>
+
+    </children>
+</AnchorPane>
